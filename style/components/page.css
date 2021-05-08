@@ -1,0 +1,27 @@
+body {
+    display: grid;
+    grid-template:
+        auto
+        1fr
+        auto/ 1fr;
+}
+
+.footer {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background-color: #08f;
+    color: #fff;
+}
+
+.header {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    background-color: #f80;
+}
+
+main {
+    margin-top: 15px;
+}

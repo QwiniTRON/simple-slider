@@ -1,0 +1,116 @@
+.slider {
+    /* --slider\gap: 30px; */
+    --gap: 30px;
+    --x-offset: 0;
+    --items: 3;
+    --item-size: calc(100% / var(--items));
+    --slider-height: 300px;
+    --arrow-margin: 10px;
+    --arrow-size: 50px;
+    --arrow-icon-size: 24px;
+    --dots-margin: 10px;
+
+    height: var(--slider-height);
+    overflow: hidden;
+    position: relative;
+}
+
+/* dots */
+.slider__dots {
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-flow: row wrap;
+
+    position: absolute;
+    bottom: var(--dots-margin);
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+
+    transition: opacity 0.2s;
+}
+.slider__dots:hover {
+    opacity: 1;
+}
+
+.slider__dot {
+    --main-color: hsl(210 100% 50%);
+
+    width: 15px;
+    height: 15px;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+}
+.slider__dot._active {
+    background-color: var(--main-color);
+}
+/* /dots */
+
+/* arrows */
+.slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--arrow-icon-size);
+    background-color: rgb(255 255 255 / 1);
+    border-radius: 8px;
+    width: var(--arrow-size);
+    height: var(--arrow-size);
+    line-height: var(--arrow-size);
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    opacity: 0.6;
+
+    transform: opacity 0.2s;
+    cursor: pointer;
+}
+.slider__arrow:hover {
+    opacity: 1;
+}
+.slider__arrow:active {
+    box-shadow: inset 0 0 3px 0 #000;
+}
+.slider__arrow--left {
+    /* width: fit-content; */
+    display: inline-block;
+    transform: rotateZ(180deg) translateY(50%);
+
+    left: var(--arrow-margin);
+}
+.slider__arrow--right {
+    right: var(--arrow-margin);
+}
+/* /arrows */
+
+.slider__track {
+    display: grid;
+    grid-auto-columns: calc(var(--item-size) - var(--gap));
+    gap: 0 var(--gap);
+    grid-auto-flow: column;
+    grid-template-rows: 100%;
+    height: 100%;
+
+    transform: translateX(calc(var(--x-offset) * -1px));
+    will-change: transform;
+}
+
+.slider__item {
+    cursor: grab;
+}
+.slider__item:active {
+    cursor: grabbing;
+}
+
+@media screen and (max-width: 648px) {
+    .slider {
+        --arrow-margin: 3px;
+        --arrow-size: 25px;
+        --arrow-icon-size: 18px;
+        --dots-margin: 0px;
+    }
+}

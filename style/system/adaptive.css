@@ -1,0 +1,38 @@
+:root {
+    --bp1: 1200px;
+    --bp2: 984px;
+    --bp3: 648px;
+    --bp4: 360px;
+
+    --cs1: 1024px;
+    --cs2: 924px;
+    --cs3: 584px;
+    --cs4: 100%;
+
+    --size-minimum: 320px;
+}
+
+
+._container {
+    margin: 0 auto;
+    max-width: var(--cs1);
+    height: 100%;
+}
+
+@media screen and (max-width:984px) {
+    ._container {
+        max-width: var(--cs2);
+    }
+}
+
+@media screen and (max-width: 648px) {
+    ._container {
+        max-width: var(--cs3);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    ._container {
+        max-width: var(--cs4);
+    }
+}

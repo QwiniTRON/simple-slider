@@ -1,0 +1,30 @@
+.content__slider .content-slider__item img {
+    border-radius: calc(3 * var(--uc));
+    display: block;
+}
+
+.content__slider {
+    margin: 24px;
+}
+
+.content__title {
+    padding: 16px;
+}
+
+.content__text {
+    padding: 16px;
+}
+
+
+@media screen and (max-width: 648px) {
+    .slider.content__slider {
+        --gap: 10px;
+        --items: 2;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .slider.content__slider {
+        --gap: 10px;
+    }
+}

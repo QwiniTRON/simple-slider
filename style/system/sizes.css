@@ -1,0 +1,14 @@
+:root {
+    /* space unit */
+    --us: 8px;
+
+    /* base unit */
+    --ub: 8px;
+
+    /* corner unit */
+    --uc: 4px;
+}
+
+html, body {
+    height: 100%;
+}

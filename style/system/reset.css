@@ -1,0 +1,13 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: currentColor;
+    text-decoration:none;
+}
+a:visited {
+    color: currentColor;
+}

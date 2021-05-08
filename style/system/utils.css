@@ -1,0 +1,23 @@
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.liquid-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.full {
+    height: 100%;
+    width: 100%;
+}

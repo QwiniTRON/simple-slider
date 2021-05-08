@@ -1,0 +1,12 @@
+@import "./components/components.css";
+@import "./system/system.css";
+@import "./font/font.css";
+
+
+html {
+    font-size: var(--fzb);
+}
+
+body {
+    font: var(--body1);
+}
